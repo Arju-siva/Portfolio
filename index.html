@@ -1,261 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Arjun Kollaruthodi's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    :root {
-      --bg-color: #f4f4f4;
-      --text-color: #333;
-      --primary-color: #0f347a;
-      --nav-bg: #333;
-      --card-bg: white;
-    }
-
-    body.dark {
-      --bg-color: #121212;
-      --text-color: #f4f4f4;
-      --nav-bg: #1e1e1e;
-      --card-bg: #1f1f1f;
-    }
-
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg-color);
-      color: var(--text-color);
-      scroll-behavior: smooth;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    header {
-      background: linear-gradient(to left, var(--primary-color), #0f347a);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      position: relative;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background: var(--nav-bg);
-      flex-wrap: wrap;
-      transition: background 0.3s;
-    }
-
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      display: block;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background: #575757;
-    }
-
-    .toggle-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      background: rgba(255,255,255,0.2);
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      color: white;
-      cursor: pointer;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .about p {
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s, background 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .project-card .content {
-      padding: 15px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 500px;
-      margin: auto;
-    }
-
-    input, textarea, button {
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      background: var(--card-bg);
-      color: var(--text-color);
-      transition: background 0.3s, color 0.3s;
-    }
-
-    button {
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #45a049;
-    }
-
-    footer {
-      background: var(--nav-bg);
-      color: white;
-      text-align: center;
-      padding: 15px;
-      transition: background 0.3s;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
-    }
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .project { margin-bottom: 40px; }
+    .project img { width: 300px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);}
+    .project-title { font-size: 1.3em; color: #2563eb; margin-bottom: 10px;}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Arjun Kollaruthodi</h1>
-    <p>Consulting & Strategy Enthusiast | Driving Growth through Market Research | Brand Management & Data-Driven Insights</p>
-    <button class="toggle-btn" id="darkModeToggle">🌙 Dark Mode</button>
-  </header>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>MBA graduate from Central University of Kerala and TISS Silver Medalist with a proven record in consulting, strategy, market research, and brand management. Skilled at transforming complex data into actionable business strategies.
-
-My professional journey includes operations management, recruitment, content strategy, and market analysis across consulting and corporate environments. Recognized for disciplined execution, analytical thinking, and an ability to align business goals with strategic outcomes.
-
-Core Strengths: Market Research | Brand Strategy | Business Development | Business Analytics | Project Management
-
-Always open to collaborating on projects that challenge norms, foster innovation, and deliver measurable results. Let’s connect!</p>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="P1.jpg" alt="Project 1">
-        <div class="content">
-          <h3>Project One</h3>
-          <p>A short description of the project goes here.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="P2.jpg" alt="Project 2">
-        <div class="content">
-          <h3>Project Two</h3>
-          <p>A short description of the project goes here.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="P3.jpg" alt="Project 3">
-        <div class="content">
-          <h3>Project Three</h3>
-          <p>A short description of the project goes here.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 [Your Name] | All Rights Reserved</p>
-  </footer>
-
-  <script>
-    // Dark mode toggle
-    document.getElementById("darkModeToggle").addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      document.getElementById("darkModeToggle").textContent =
-        document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
-    });
-
-    // Smooth reveal animation
-    const sections = document.querySelectorAll("section");
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < triggerBottom) {
-          section.classList.add("visible");
-        }
-      });
-    };
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
-
-    // Form submit
-    document.querySelector("form").addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("Thanks for contacting me! I will get back to you soon.");
-    });
-  </script>
+  <h1>Welcome to My Portfolio</h1>
+  <div class="project">
+    <div class="project-title">Project 1</div>
+    <img src="P1.jpg" alt="Project 1">
+    <p>Description for Project 1 goes here.</p>
+  </div>
+  <div class="project">
+    <div class="project-title">Project 2</div>
+    <img src="P2.jpg" alt="Project 2">
+    <p>Description for Project 2 goes here.</p>
+  </div>
+  <div class="project">
+    <div class="project-title">Project 3</div>
+    <img src="P3.jpg" alt="Project 3">
+    <p>Description for Project 3 goes here.</p>
+  </div>
 </body>
 </html>
-
-
