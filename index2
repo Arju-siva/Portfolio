@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arjun Kollaruthodi's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    .project { margin-bottom: 40px; }
+    .project img { width: 300px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);}
+    .project-title { font-size: 1.3em; color: #2563eb; margin-bottom: 10px;}
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Portfolio</h1>
+  <div class="project">
+    <div class="project-title">Project 1</div>
+    <img src="P1.jpg" alt="Project 1">
+    <p>Description for Project 1 goes here.</p>
+  </div>
+  <div class="project">
+    <div class="project-title">Project 2</div>
+    <img src="P2.jpg" alt="Project 2">
+    <p>Description for Project 2 goes here.</p>
+  </div>
+  <div class="project">
+    <div class="project-title">Project 3</div>
+    <img src="P3.jpg" alt="Project 3">
+    <p>Description for Project 3 goes here.</p>
+  </div>
+</body>
+</html>
